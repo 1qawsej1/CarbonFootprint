@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQs</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #D1FFBD;
+            }
+
+            nav {
+                background-color: #333;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            nav ul li {
+                float: left;
+            }
+
+            nav ul li a,
+            .dropbtn {
+                display: inline-block;
+                color: ghostwhite;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            nav ul li a:hover,
+            .dropdown:hover .dropbtn {
+                background-color: #111;
+            }
+
+            .dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .faq-item {
+                margin-bottom: 20px;
+            }
+
+            .faq-question {
+                font-weight: bold;
+            }
+
+            .faq-answer {
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">News and Updates</a>
+                    <div class="dropdown-content">
+                        <a href="news.html">News</a>
+                        <a href="updates.html">Updates</a>
+                    </div>
+                </li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1 style="font-size:75px"> Frequently Asked Questions </h1> 
+                    
+            <div class="faq-item">
+                <div class="faq-question"><h1 style="font-size:50px">1. What is a carbon footprint?</div>
+                <div class="faq-answer"><h1 style="font-size:25px">A carbon footprint is the total amount of greenhouse gases, particularly carbon dioxide (CO2), emitted directly or indirectly by human activities. Go to our About Carbonfootprint page to find out more information about carbon footprint!
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h1 style="font-size:50px">2. Why should I be concerned about my carbon footprint?</div>
+                <div class="faq-answer"><h1 style="font-size:25px">Your carbon footprint contributes to climate change and global warming. By reducing it, you can help mitigate these impacts and preserve the environment for future generations.</div>
+              </div>
+            <div class="faq-item">
+                <div class="faq-question"><h1 style="font-size:50px">3. How can I calculate my carbon footprint?</div>
+                <div class="faq-answer"><h1 style="font-size:25px">You can calculate your carbon footprint using online calculators that take into account factors such as your energy use, transportation habits, diet, and more. Click the link below to try it out!</div><a href="https://www.carbonfootprint.com/calculator.aspx">Click here to visit carbonfootprint.com to calculate your carbon footprint!</a>
+
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h1 style="font-size:50px">4. What are some ways to reduce my carbon footprint at home?</div>
+                <div class="faq-answer"><h1 style="font-size:25px">Simple steps include using energy-efficient appliances, reducing water usage, improving insulation, switching to renewable energy sources, and adopting sustainable practices like recycling.
+</div>
+          </div>
+            <div class="faq-item">
+                            <div class="faq-question"><h1 style="font-size:50px">5. How does transportation affect my carbon footprint?</div>
+                                <div class="faq-answer"><h1 style="font-size:25px">Transportation, particularly driving and flying, contributes significantly to carbon emissions. You can reduce this impact by carpooling, using public transport, walking, biking, or opting for fuel-efficient vehicles.
+                </div>
+                </div>
+                <div class="faq-item">
+                            <div class="faq-question"><h1 style="font-size:50px">6. What role does diet play in carbon footprint?</div>
+                                <div class="faq-answer"><h1 style="font-size:25px">The food we consume, especially meat and dairy products, can have a substantial carbon footprint due to agriculture’s emissions. Choosing more plant-based options and reducing food waste can help lower your footprint.
+
+                </div>
+                    </div>
+                    <div class="faq-item">
+                                <div class="faq-question"><h1 style="font-size:50px">7. Where can I find more information on reducing my carbon footprint?</div>
+                                    <div class="faq-answer"><h1 style="font-size:25px">Our website provides resources, tips, and links to further reading on reducing carbon footprints and living a more sustainable lifestyle.
+
+
+                    </div>
+        </div>
+    </body>
+
+    </html>
