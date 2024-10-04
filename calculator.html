@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+        }
+
+        nav {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a,
+        .dropbtn {
+            display: inline-block;
+            color: ghostwhite;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            margin-top: 80px; /* To prevent overlap with the fixed navbar */
+        }
+        </head>
+        <body>
+
+        <div class="container">
+            <h1>Carbon Footprint Calculator</h1>
+            <form method="POST">
+                <label for="electricity_kWh">Electricity Usage (kWh):</label>
+                <input type="number" name="electricity_kWh" id="electricity_kWh" step="any" required>
+
+                <label for="gas_therms">Gas Usage (therms):</label>
+                <input type="number" name="gas_therms" id="gas_therms" step="any" required>
+
+                <label for="car_miles">Car Mileage (miles):</label>
+                <input type="number" name="car_miles" id="car_miles" step="any" required>
+
+                <label for="car_mpg">Car Fuel Efficiency (mpg):</label>
+                <input type="number" name="car_mpg" id="car_mpg" step="any" required>
+
+                <label for="flight_hours">Flight Hours:</label>
+                <input type="number" name="flight_hours" id="flight_hours" step="any" required>
+
+                <button type="submit">Calculate Footprint</button>
+            </form>
+
+            {% if result is not none %}
+            <div class="result">
+                <p>Your total estimated carbon footprint for the month is: <strong>{{ result:.2f }} kg CO2</strong></p>
+            </div>
+            {% endif %}
+        </div>
+
+        </body>
+        </html>
