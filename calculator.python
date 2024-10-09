@@ -1,41 +1,17 @@
+de# app.py
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
 def vehicle_emissions(miles, fuel_efficiency):
-    """
-    Calculate CO2 emissions from vehicle usage.
-    Args:
-        miles (float): Number of miles driven.
-        fuel_efficiency (float): Vehicle's fuel efficiency in miles per gallon (mpg).
-        
-    Returns:
-        float: CO2 emissions in kg.
-    """
     CO2_per_gallon = 8.887  # kg of CO2 per gallon of gasoline
     gallons_used = miles / fuel_efficiency
     return gallons_used * CO2_per_gallon
 
-
 def energy_emissions(kWh, emission_factor=0.92):
-    """
-    Calculate CO2 emissions from electricity usage.
-    Args:
-        kWh (float): Kilowatt-hours used.
-        emission_factor (float): Emission factor in kg CO2 per kWh (default 0.92).
-        
-    Returns:
-        float: CO2 emissions in kg.
-    """
     return kWh * emission_factor
 
-
 def flight_emissions(distance, flight_type='short'):
-    """
-    Calculate CO2 emissions from flights.
-    Args:
-        distance (float): Distance traveled in kilometers.
-        flight_type (str): Type of flight ('short', 'medium', 'long').
-        
-    Returns:
-        float: CO2 emissions in kg.
-    """
     emission_factors = {
         'short': 0.15,  # kg CO2 per km
         'medium': 0.12,
@@ -43,34 +19,47 @@ def flight_emissions(distance, flight_type='short'):
     }
     return distance * emission_factors.get(flight_type, 0.12)
 
-
 def calculate_carbon_footprint(vehicle_miles, fuel_efficiency, kWh_used, flight_km, flight_type='short'):
-    """
-    Calculate total carbon footprint based on vehicle, energy, and flight emissions.
-    Args:
-        vehicle_miles (float): Number of miles driven.
-        fuel_efficiency (float): Vehicle fuel efficiency in mpg.
-        kWh_used (float): Electricity used in kWh.
-        flight_km (float): Distance traveled by flights in km.
-        flight_type (str): Type of flight ('short', 'medium', 'long').
-        
-    Returns:
-        float: Total CO2 emissions in kg.
-    """
     vehicle_co2 = vehicle_emissions(vehicle_miles, fuel_efficiency)
     energy_co2 = energy_emissions(kWh_used)
     flight_co2 = flight_emissions(flight_km, flight_type)
-    
     total_co2 = vehicle_co2 + energy_co2 + flight_co2
     return total_co2
 
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        try:
+            vehicle_miles = float(request.form.get('vehicle_miles', 0))
+            fuel_efficiency = float(request.form.get('fuel_efficiency', 1))  # Prevent division by zero
+            kWh_used = float(request.form.get('kWh_used', 0))
+            flight_km = float(request.form.get('flight_km', 0))
+            flight_type = request.form.get('flight_type', 'short')
 
-# Example usage:
-vehicle_miles = float(input("Enter the number of miles driven: "))
-fuel_efficiency = float(input("Enter your vehicle's fuel efficiency (mpg): "))
-kWh_used = float(input("Enter your electricity usage (kWh): "))
-flight_km = float(input("Enter your flight distance (km): "))
-flight_type = input("Enter your flight type (short, medium, long): ")
+            total_footprint = calculate_carbon_footprint(
+                vehicle_miles, fuel_efficiency, kWh_used, flight_km, flight_type
+            )
+            return render_template('index.html', result=total_footprint)
+        except ValueError:
+            return render_template('index.html', error="Please enter valid numbers.")
+    return render_template('index.html')
 
-total_footprint = calculate_carbon_footprint(vehicle_miles, fuel_efficiency, kWh_used, flight_km, flight_type)
-print(f"Your total carbon footprint is: {total_footprint:.2f} kg of CO2")
+@app.route('/api/calculate', methods=['POST'])
+def api_calculate():
+    data = request.json
+    try:
+        vehicle_miles = float(data.get('vehicle_miles', 0))
+        fuel_efficiency = float(data.get('fuel_efficiency', 1))
+        kWh_used = float(data.get('kWh_used', 0))
+        flight_km = float(data.get('flight_km', 0))
+        flight_type = data.get('flight_type', 'short')
+
+        total_footprint = calculate_carbon_footprint(
+            vehicle_miles, fuel_efficiency, kWh_used, flight_km, flight_type
+        )
+        return jsonify({"total_co2_kg": total_footprint})
+    except (ValueError, TypeError):
+        return jsonify({"error": "Invalid input."}), 400
+
+if __name__ == "__main__":
+    app.run()
