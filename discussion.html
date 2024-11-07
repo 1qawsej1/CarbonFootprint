@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your existing discussion page styles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you are using an external CSS file -->
 </head>
 
 <body>
@@ -22,26 +22,28 @@
         </ul>
     </nav>
 
-    <header>
-        <h1>Discussion Page</h1>
-        <p>Share your thoughts and engage in conversation!</p>
-    </header>
-
+    <!-- Main Content -->
     <main>
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <h1>Discussion Page - Share your thoughts and engage in conversation!</h1>
+        </div>
+
+        <!-- Comment Section -->
         <div id="comment-section">
-            <h2>Comments</h2>
+            <h2>Join the Conversation</h2>
             <form id="comment-form">
                 <input type="text" id="username-input" placeholder="Enter your username" required>
-                <textarea id="comment-input" placeholder="Write a comment..." required></textarea>
-                <button type="submit">Add Comment</button>
+                <textarea id="comment-input" placeholder="Write your comment" required></textarea>
+                <button type="submit">Post Comment</button>
             </form>
-            <div id="comments-container">
-                <!-- Comments will be displayed here -->
-            </div>
+
+            <!-- Display Comments Here -->
+            <div id="comments-container"></div>
         </div>
     </main>
 
-    <script src="script.js"></script> <!-- Your existing JS for the discussion page -->
+    <script src="script.js"></script> <!-- Assuming you're using an external JS file -->
 </body>
 
 </html>
