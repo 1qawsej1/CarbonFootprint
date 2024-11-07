@@ -81,13 +81,13 @@ nav ul li a:hover,
 
 /* Title Bar Styles */
 .title-bar {
-    background-color: #333;  /* Dark background color */
-    color: white;            /* White text */
-    padding: 20px 0;         /* Vertical padding for spacing */
-    text-align: center;      /* Center the text */
-    font-size: 24px;         /* Font size */
-    font-weight: bold;       /* Make the text bold */
-    margin-bottom: 20px;     /* Space between the title and other content */
+    background-color: #90EE90;  /* Light green background color */
+    color: white;                /* White text */
+    padding: 15px 0;             /* Vertical padding for spacing */
+    text-align: center;          /* Center the text */
+    font-size: 20px;             /* Smaller font size */
+    font-weight: bold;           /* Make the text bold */
+    margin-bottom: 20px;         /* Space between the title and other content */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
 }
 
