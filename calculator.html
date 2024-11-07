@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,69 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-image: url('1.jpg');
+            background-size: 100%;
         }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a,
+        .dropbtn {
+            display: inline-block;
+            color: ghostwhite;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .container {
             background-color: white;
             padding: 20px;
@@ -19,14 +80,17 @@
             max-width: 500px;
             margin: auto;
         }
+
         .input-group {
             margin-bottom: 20px;
         }
+
         label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
         }
+
         input[type="number"] {
             width: 100%;
             padding: 10px;
@@ -34,6 +98,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         button {
             padding: 10px 15px;
             font-size: 16px;
@@ -43,9 +108,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #45a049;
         }
+
         .result {
             margin-top: 20px;
             padding: 15px;
@@ -55,64 +122,80 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h2>Carbon Footprint Calculator</h2>
-    <div class="input-group">
-        <label for="miles">Miles Driven per Year (Car):</label>
-        <input type="number" id="miles" placeholder="Enter miles driven per year">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="calculator.html">CFP Calculator</a></li>
+            <li><a href="discussion.html">Discussion Page</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carbon Footprint Calculator -->
+    <div class="container">
+        <h2>Carbon Footprint Calculator</h2>
+        <div class="input-group">
+            <label for="miles">Miles Driven per Year (Car):</label>
+            <input type="number" id="miles" placeholder="Enter miles driven per year">
+        </div>
+        <div class="input-group">
+            <label for="electricity">Electricity Used per Month (kWh):</label>
+            <input type="number" id="electricity" placeholder="Enter monthly electricity usage">
+        </div>
+        <div class="input-group">
+            <label for="waste">Waste Produced per Month (kg):</label>
+            <input type="number" id="waste" placeholder="Enter monthly waste in kg">
+        </div>
+        <button onclick="calculateFootprint()">Calculate Footprint</button>
+
+        <div class="result" id="result">
+            <!-- The result will be displayed here -->
+        </div>
     </div>
-    <div class="input-group">
-        <label for="electricity">Electricity Used per Month (kWh):</label>
-        <input type="number" id="electricity" placeholder="Enter monthly electricity usage">
-    </div>
-    <div class="input-group">
-        <label for="waste">Waste Produced per Month (kg):</label>
-        <input type="number" id="waste" placeholder="Enter monthly waste in kg">
-    </div>
-    <button onclick="calculateFootprint()">Calculate Footprint</button>
 
-    <div class="result" id="result">
-        <!-- The result will be displayed here -->
-    </div>
-</div>
+    <script>
+        function calculateFootprint() {
+            // Getting user input
+            let milesDriven = document.getElementById('miles').value;
+            let electricityUsed = document.getElementById('electricity').value;
+            let wasteProduced = document.getElementById('waste').value;
 
-<script>
-    function calculateFootprint() {
-        // Getting user input
-        let milesDriven = document.getElementById('miles').value;
-        let electricityUsed = document.getElementById('electricity').value;
-        let wasteProduced = document.getElementById('waste').value;
+            // Emission factors (These can vary depending on the source and location)
+            const carEmissionFactor = 0.411; // kg CO2 per mile (average car)
+            const electricityEmissionFactor = 0.92; // kg CO2 per kWh (average in the US)
+            const wasteEmissionFactor = 0.01; // kg CO2 per kg of waste
 
-        // Emission factors (These can vary depending on the source and location)
-        const carEmissionFactor = 0.411; // kg CO2 per mile (average car)
-        const electricityEmissionFactor = 0.92; // kg CO2 per kWh (average in the US)
-        const wasteEmissionFactor = 0.01; // kg CO2 per kg of waste
+            // Convert inputs to numbers
+            milesDriven = parseFloat(milesDriven);
+            electricityUsed = parseFloat(electricityUsed);
+            wasteProduced = parseFloat(wasteProduced);
 
-        // Convert inputs to numbers
-        milesDriven = parseFloat(milesDriven);
-        electricityUsed = parseFloat(electricityUsed);
-        wasteProduced = parseFloat(wasteProduced);
+            // Calculate carbon footprint
+            let carEmissions = milesDriven * carEmissionFactor;
+            let electricityEmissions = electricityUsed * electricityEmissionFactor;
+            let wasteEmissions = wasteProduced * wasteEmissionFactor;
 
-        // Calculate carbon footprint
-        let carEmissions = milesDriven * carEmissionFactor;
-        let electricityEmissions = electricityUsed * electricityEmissionFactor;
-        let wasteEmissions = wasteProduced * wasteEmissionFactor;
+            // Total carbon footprint
+            let totalCarbonFootprint = carEmissions + electricityEmissions + wasteEmissions;
 
-        // Total carbon footprint
-        let totalCarbonFootprint = carEmissions + electricityEmissions + wasteEmissions;
-
-        // Display result
-        document.getElementById('result').innerHTML = `
-            <h3>Your Estimated Carbon Footprint:</h3>
-            <p>Car Emissions: ${carEmissions.toFixed(2)} kg CO2</p>
-            <p>Electricity Emissions: ${electricityEmissions.toFixed(2)} kg CO2</p>
-            <p>Waste Emissions: ${wasteEmissions.toFixed(2)} kg CO2</p>
-            <h4>Total Carbon Footprint: ${totalCarbonFootprint.toFixed(2)} kg CO2 per year</h4>
-        `;
-    }
-</script>
+            // Display result
+            document.getElementById('result').innerHTML = `
+                <h3>Your Estimated Carbon Footprint:</h3>
+                <p>Car Emissions: ${carEmissions.toFixed(2)} kg CO2</p>
+                <p>Electricity Emissions: ${electricityEmissions.toFixed(2)} kg CO2</p>
+                <p>Waste Emissions: ${wasteEmissions.toFixed(2)} kg CO2</p>
+                <h4>Total Carbon Footprint: ${totalCarbonFootprint.toFixed(2)} kg CO2 per year</h4>
+            `;
+        }
+    </script>
 
 </body>
+
 </html>
