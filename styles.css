@@ -24,9 +24,8 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the left */
 }
 
 nav ul li {
@@ -78,6 +77,18 @@ nav ul li a:hover,
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Title Bar Styles */
+.title-bar {
+    background-color: #333;  /* Dark background color */
+    color: white;            /* White text */
+    padding: 20px 0;         /* Vertical padding for spacing */
+    text-align: center;      /* Center the text */
+    font-size: 24px;         /* Font size */
+    font-weight: bold;       /* Make the text bold */
+    margin-bottom: 20px;     /* Space between the title and other content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
 }
 
 /* Main Content Styles for Discussion Page */
