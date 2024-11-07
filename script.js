@@ -131,12 +131,14 @@ document.addEventListener("DOMContentLoaded", () => {
             allComments.push(comment);
         });
 
+        console.log("Saving comments:", allComments); // Debug log
         localStorage.setItem('comments', JSON.stringify(allComments));
     }
 
     // Function to load comments from localStorage
     function loadComments() {
         const savedComments = JSON.parse(localStorage.getItem('comments')) || [];
+        console.log("Loading comments:", savedComments); // Debug log
         savedComments.forEach((comment) => {
             addComment(comment.username, comment.text);
 
