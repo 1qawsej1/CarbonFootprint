@@ -37,49 +37,50 @@
             top: 0;
             width: 100%;
             z-index: 1;
-            padding: 10px 0; /* Added padding for consistency */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 0; /* Reduced left padding */
+            margin-left: -10px; /* Shifts all items slightly to the left */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
         }
 
-        nav .logo {
+        .logo {
             display: flex;
             align-items: center;
             color: white;
-            padding: 10px 20px;
             font-size: 1.5em;
             font-weight: bold;
         }
 
-        nav .logo img {
-            height: 60px; /* Logo size */
+        .logo img {
+            height: 50px;
             width: auto;
             margin-right: 10px;
         }
 
         nav ul {
             list-style-type: none;
+            display: flex;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            display: flex; /* Use flexbox to align items horizontally */
-            justify-content: flex-start; /* Align items to the left */
         }
 
         nav ul li {
-            margin-right: 20px; /* Space between items */
+            margin-left: 20px;
         }
 
         nav ul li a {
-            display: inline-block;
-            color: white; /* Navbar links text color */
-            padding: 14px 20px;
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            text-align: center;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #083; /* Darker green background on hover */
-            border-radius: 4px; /* Rounded corners on hover */
+            background-color: #083; /* Dark green on hover */
         }
 
         /* Main content styling */
