@@ -21,52 +21,57 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar styling */
+/* Navbar styling (Updated from Home page) */
 nav {
     background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 0; /* Reduced left padding */
+    margin-left: -10px; /* Shifts all items slightly to the left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: inline-block;
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    background-color: #083;
-}
-
-/* Logo styling */
-.logo {
+nav .logo {
     display: flex;
     align-items: center;
     color: white;
-    padding: 10px 20px;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-.logo img {
-    height: 60px; /* Increased logo size */
+nav .logo img {
+    height: 50px; /* Adjusted logo size */
     width: auto;
     margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #083; /* Dark green on hover */
 }
 
 /* Content styling with clear font size hierarchy */
