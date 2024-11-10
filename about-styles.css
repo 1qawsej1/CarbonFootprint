@@ -23,7 +23,7 @@ body::before {
 
 /* Navbar styling */
 nav {
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
     position: fixed;
     top: 0;
     width: 100%;
@@ -58,19 +58,16 @@ nav ul li {
     display: inline-block; /* Changed from float for better alignment */
 }
 
-nav ul li a,
-.dropbtn {
+nav ul li a {
     display: inline-block;
-    color: ghostwhite;
-    text-align: center;
-    padding: 12px 14px; /* Reduced padding */
-    font-size: 1em; /* Standard font size for menu */
+    color: white;
+    padding: 14px 20px; /* Updated padding */
     text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a:hover,
-.dropdown:hover .dropbtn {
-    background-color: #111;
+nav ul li a:hover {
+    background-color: #083; /* Hover effect with darker green */
 }
 
 /* Dropdown styling */
