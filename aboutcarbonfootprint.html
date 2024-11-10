@@ -84,65 +84,49 @@
         }
 
         /* Main content styling */
-        .content {
-            padding: 120px 0 20px 20px; /* Remove margin from center and shift padding to left */
-            text-align: left; /* Ensuring the text aligns to the left */
+        h1, h2, h3, h4, p, ul, li {
+            margin: 20px;
             color: white;
-            max-width: 900px;
-            margin: 0; /* Remove centering */
         }
 
-        /* Title styling */
-        .content h1 {
+        h1 {
             font-size: 4em;
             margin-bottom: 0.5em;
-            color: #fff;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .content h2 {
+        h2, h3 {
             font-size: 3.5em;
             margin-bottom: 0.5em;
-            color: #fff;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .content h3 {
-            font-size: 2.5em;
+        h4 {
+            font-size: 1.2em;
             margin-bottom: 0.5em;
-            color: #fff;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .content h4 {
-            font-size: 1.2em; /* Adjusted font size */
-            margin-bottom: 0.5em;
-            color: #fff;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .content p {
+        p {
             font-size: 1.6em;
             line-height: 1.6;
             color: #ddd;
-            margin: 0 0 20px 0;
         }
 
-        .content ul {
+        ul {
             font-size: 1.5em;
-            margin: 0;
             padding-left: 20px;
         }
 
-        .content li {
+        li {
             margin-bottom: 15px;
         }
 
-        .content li ul {
+        li ul {
             font-size: 1.2em;
         }
 
-        .content li li {
+        li li {
             font-size: 1em;
         }
 
@@ -211,54 +195,49 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="content">
-        <h1>What is a Carbon Footprint?</h1>
-        <p>A carbon footprint is the total amount of greenhouse gases (primarily carbon dioxide, or CO₂) that are released into the atmosphere due to human activities. These activities range from driving a car to producing the products we use every day. Understanding our carbon footprint is crucial to recognizing how our lifestyle impacts climate change. Reducing this footprint can contribute significantly to mitigating global warming.</p>
+    <h1>What is a Carbon Footprint?</h1>
+    <p>A carbon footprint is the total amount of greenhouse gases (primarily carbon dioxide, or CO₂) that are released into the atmosphere due to human activities. These activities range from driving a car to producing the products we use every day. Understanding our carbon footprint is crucial to recognizing how our lifestyle impacts climate change. Reducing this footprint can contribute significantly to mitigating global warming.</p>
 
-        <h2>Types of Carbon Emissions</h2>
+    <h2>Types of Carbon Emissions</h2>
 
-        <h3>Direct Emissions</h3>
-        <p>Direct emissions come from sources that you control, such as:</p>
-        <ul>
-            <li><h4>Burning fuel in cars or heating:</h4> Every time you drive a car or heat your home using gas, carbon dioxide is emitted into the atmosphere. These emissions are direct because they are generated from activities that you control.</li>
-            <li><h4>Factories and industrial processes:</h4> Manufacturing industries, such as cement production, also emit large quantities of CO₂ through burning fuels to power machines and processes.</li>
-        </ul>
-        <div class="image-container">
-            <img src="direct-emissions.jpg" alt="Direct Emissions">
-        </div>
-
-        <h3>Indirect Emissions</h3>
-        <p>Indirect emissions come from activities you do not directly control but benefit from, such as:</p>
-        <ul>
-            <li><h4>Electricity from power plants:</h4> The generation of electricity in power plants that burn fossil fuels contributes indirectly to your carbon footprint. You may not be the one burning the fuel, but the electricity you use is powered by these plants.</li>
-            <li><h4>Emissions from making and transporting the goods you buy:</h4> Manufacturing products and shipping them to stores or homes requires energy, often sourced from fossil fuels, contributing to your carbon footprint.</li>
-        </ul>
-        <div class="image-container">
-            <img src="indirect-emissions.jpg" alt="Indirect Emissions">
-        </div>
-
-        <h3>Product Life Cycle Emissions</h3>
-        <p>Every product has a life cycle that includes:</p>
-        <ul>
-            <li><h4>Making materials, manufacturing, shipping, using, and disposing of the product:</h4> From the extraction of raw materials to the disposal of the product after use, every stage emits greenhouse gases. For example, producing a smartphone involves mining for materials, manufacturing, transporting, and eventual disposal.</li>
-        </ul>
-        <div class="image-container">
-            <img src="product-lifecycle.jpg" alt="Product Life Cycle">
-        </div>
-
-        <h2>How Can You Reduce Your Carbon Footprint?</h2>
-        <p>Reducing your carbon footprint involves making conscious choices that reduce the amount of greenhouse gases you release into the atmosphere. Simple changes in daily habits can have a significant impact, such as:</p>
-        <ul>
-            <li><h4>Driving less and using public transport:</h4> Walking, cycling, or using public transport reduces the need for burning fossil fuels in cars.</li>
-            <li><h4>Switching to renewable energy sources:</h4> Solar panels and wind energy reduce reliance on fossil fuels for electricity generation.</li>
-        </ul>
-        <div class="image-container">
-            <img src="reduce-footprint.jpg" alt="Reduce Footprint">
-        </div>
-
-        <p class="slogan">Every little action counts towards a cleaner planet!</p>
-        <a href="calculator.html" class="cta-button">Calculate Your Footprint</a>
+    <h3>Direct Emissions</h3>
+    <p>Direct emissions come from sources that you control, such as:</p>
+    <ul>
+        <li><h4>Burning fuel in cars or heating:</h4> Every time you drive a car or heat your home using gas, carbon dioxide is emitted into the atmosphere. These emissions are direct because they are generated from activities that you control.</li>
+        <li><h4>Factories and industrial processes:</h4> Manufacturing industries, such as cement production, also emit large quantities of CO₂ through burning fuels to power machines and processes.</li>
+    </ul>
+    <div class="image-container">
+        <img src="direct-emissions.jpg" alt="Direct Emissions">
     </div>
+
+    <h3>Indirect Emissions</h3>
+    <p>Indirect emissions come from activities you do not directly control but benefit from, such as:</p>
+    <ul>
+        <li><h4>Electricity from power plants:</h4> The generation of electricity in power plants that burn fossil fuels contributes indirectly to your carbon footprint. You may not be the one burning the fuel, but the electricity you use is powered by these plants.</li>
+        <li><h4>Emissions from making and transporting the goods you buy:</h4> Manufacturing products and shipping them to stores or homes requires energy, often sourced from fossil fuels, contributing to your carbon footprint.</li>
+    </ul>
+    <div class="image-container">
+        <img src="indirect-emissions.jpg" alt="Indirect Emissions">
+    </div>
+
+    <h3>Product Life Cycle Emissions</h3>
+    <p>Every product has a life cycle that includes:</p>
+    <ul>
+        <li><h4>Making materials, manufacturing, shipping, using, and disposing of the product:</h4> From the extraction of raw materials to the disposal of the product after use, every stage emits greenhouse gases. For example, producing a smartphone involves mining for materials, manufacturing, transporting, and eventual disposal.</li>
+    </ul>
+    <div class="image-container">
+        <img src="product-lifecycle.jpg" alt="Product Life Cycle">
+    </div>
+
+    <h2>How Can You Reduce Your Carbon Footprint?</h2>
+    <p>Reducing your carbon footprint involves making conscious choices that reduce the amount of greenhouse gases you release into the atmosphere. Simple changes in daily habits can have a significant impact:</p>
+    <ul>
+        <li>Use energy-efficient appliances and light bulbs.</li>
+        <li>Opt for renewable energy sources like solar or wind power.</li>
+        <li>Use public transportation, carpool, or switch to electric vehicles to reduce transportation emissions.</li>
+        <li>Reduce, reuse, and recycle to minimize waste and the associated carbon emissions from landfills.</li>
+    </ul>
+    <a href="calculator.html" class="cta-button">Calculate Your Carbon Footprint</a>
 </body>
 
 </html>
