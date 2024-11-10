@@ -46,8 +46,8 @@ nav ul li a,
     display: inline-block;
     color: ghostwhite;
     text-align: center;
-    padding: 16px 18px; /* Slightly larger padding for the menu */
-    font-size: 1.1em; /* Larger menu font */
+    padding: 12px 14px; /* Reduced padding */
+    font-size: 1em; /* Standard font size for menu */
     text-decoration: none;
 }
 
@@ -72,8 +72,8 @@ nav ul li a:hover,
 
 .dropdown-content a {
     color: black;
-    padding: 14px 16px;
-    font-size: 1.1em; /* Larger font size for dropdown */
+    padding: 10px 14px;
+    font-size: 1em; /* Dropdown font size */
     text-decoration: none;
     display: block;
     text-align: left;
@@ -90,22 +90,22 @@ nav ul li a:hover,
 
 /* Content styling */
 .content {
-    padding: 100px 25px 25px; /* Adjusted top padding for fixed nav */
+    padding: 80px 20px 20px; /* Top padding for nav */
     color: white;
 }
 
 .content h1 {
     text-align: center;
     margin-top: 20px;
-    font-size: 3.5em; /* Larger title size */
+    font-size: 2.5em; /* Moderate title size */
     font-weight: bold;
     color: white;
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .content h2,
 .content h3 {
-    font-size: 2.5em; /* Larger subtitles */
+    font-size: 1.75em; /* Moderate subtitle size */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -114,8 +114,8 @@ nav ul li a:hover,
 .content p,
 .content ul,
 .content li {
-    font-size: 1.5em; /* Larger content font */
-    line-height: 1.8;
+    font-size: 1.2em; /* Reduced content font size */
+    line-height: 1.6;
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -128,8 +128,8 @@ nav ul li a:hover,
 }
 
 .image-container img {
-    max-width: 80%;
-    max-height: 450px; /* Adjusted max height for better visibility */
+    max-width: 75%; /* Reduced max width */
+    max-height: 350px; /* Reduced max height */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
