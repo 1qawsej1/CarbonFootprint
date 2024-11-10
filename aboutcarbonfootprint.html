@@ -85,11 +85,11 @@
 
         /* Main content styling */
         .content {
-            padding: 120px 20px 20px; /* To avoid overlap with navbar */
+            padding: 120px 0 20px 20px; /* Remove margin from center and shift padding to left */
             text-align: left; /* Ensuring the text aligns to the left */
             color: white;
             max-width: 900px;
-            margin: 0 auto; /* Centers the content container, but text remains aligned to the left */
+            margin: 0; /* Remove centering */
         }
 
         .content h1 {
@@ -147,7 +147,7 @@
         /* Image container styling */
         .image-container {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Align images to the left */
             margin-top: 20px;
         }
 
@@ -241,21 +241,12 @@
                     <li>Waste: Emissions from managing waste.</li>
                 </ul>
                 <div class="image-container">
-                    <img src="global-footprint.png" alt="Global Carbon Footprint">
+                    <img src="country-footprint.jpg" alt="Country and Global Carbon Footprints">
                 </div>
             </li>
-            <li><strong>Ways to Reduce Carbon Footprints:</strong>
-                <ul>
-                    <li>Use Less Energy: Be energy-efficient.</li>
-                    <li>Switch to Renewables: Solar, wind, etc.</li>
-                    <li>Choose Greener Transport: Walk, bike, public transit.</li
-                    <li>Eat a Plant-Based Diet: Less meat, fewer emissions.</li>
-                </ul>
-            </li>
         </ul>
-        <div class="cta-button-container">
-            <a href="calculator.html" class="cta-button">Calculate Your Carbon Footprint</a>
-        </div>
+        <p class="slogan">Lower your carbon footprint, save the planet!</p>
+        <a href="https://www.calculator.com" class="cta-button">Calculate Your Carbon Footprint</a>
     </div>
 </body>
 
