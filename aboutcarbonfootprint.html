@@ -31,57 +31,60 @@
         }
 
         /* Navbar styling */
-        nav {
-            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 10px 10px 0; /* Reduced left padding */
-            margin-left: -10px; /* Shifts all items slightly to the left */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-        }
+nav {
+    background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px; /* Reduced padding */
+    margin-left: -5px; /* Adjusted to shift items more appropriately */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            color: white;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2em; /* Reduced font size for the logo */
+    font-weight: bold;
+}
 
-        .logo img {
-            height: 50px;
-            width: auto;
-            margin-right: 10px;
-        }
+.logo img {
+    height: 40px; /* Adjusted logo size */
+    width: auto;
+    margin-right: 10px;
+}
 
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+/* Navbar links styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-        nav ul li {
-            margin-left: 20px;
-        }
+nav ul li {
+    margin-left: 15px; /* Reduced margin between items */
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1em; /* Reduced font size */
+}
 
-        nav ul li a:hover {
-            background-color: #083; /* Dark green on hover */
-        }
+nav ul li a:hover {
+    background-color: #083; /* Dark green on hover */
+}
 
         /* Main content styling */
         h1, h2, h3, h4, p, ul, li {
