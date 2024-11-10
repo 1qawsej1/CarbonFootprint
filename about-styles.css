@@ -21,7 +21,7 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar styling (Updated from Home page) */
+/* Navbar styling */
 nav {
     background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
     position: fixed;
