@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Assuming you are using an external CSS file -->
-</head>
-
-<body>
-       <nav>
-       nav {
+    <style>
+        /* Navbar styling */
+        nav {
             background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
             position: fixed;
             top: 0;
@@ -49,6 +47,7 @@
             padding: 10px 20px;
             font-size: 1.5em;
             font-weight: bold;
+            float: left; /* Aligns the logo to the left */
         }
 
         .logo img {
@@ -56,7 +55,12 @@
             width: auto;
             margin-right: 10px;
         }
-              </nav>
+    </style>
+</head>
+
+<body>
+    <!-- Navbar with logo -->
+    <nav>
         <div class="logo">
             <img src="sustainify-logo.png" alt="Sustainify Logo">
             Sustainify
@@ -71,7 +75,8 @@
             <li><a href="discussion.html">Discussion Page</a></li>
         </ul>
     </nav>
-    <main>
+
+    <main style="padding-top: 100px;"> <!-- Offset main content for fixed navbar -->
         <!-- Title Bar -->
         <div class="title-bar">
             <h1>Discussion Page - Share your thoughts and engage in conversation!</h1>
