@@ -13,7 +13,7 @@
             background-image: url('1.jpg');
             background-size: cover;
             background-position: center;
-            color: black; /* Set body text color to black */
+            color: black;
         }
 
         /* Dark overlay for better text readability */
@@ -44,18 +44,21 @@
             padding: 0;
             overflow: hidden;
             display: flex;
+            align-items: center;
         }
 
         nav ul li {
-            float: left;
+            flex-grow: 1;
+            text-align: center;
         }
 
         nav ul li a {
             display: inline-block;
-            color: white; /* Navbar text color set to white */
+            color: white;
             padding: 14px 20px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1em;
         }
 
         nav ul li a:hover {
@@ -66,15 +69,14 @@
         .logo {
             display: flex;
             align-items: center;
-            color: white; /* Logo text color set to white */
+            color: white;
             padding: 10px 20px;
             font-size: 1.5em;
             font-weight: bold;
-            margin-right: 20px; /* Adds space between logo and menu items */
         }
 
         .logo img {
-            height: 60px;
+            height: 50px;
             width: auto;
             margin-right: 10px;
         }
@@ -83,7 +85,7 @@
         .content {
             padding: 120px 20px 20px;
             text-align: center;
-            color: black; /* Content text color set to black */
+            color: black;
         }
 
         .content h1 {
@@ -97,7 +99,7 @@
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
-            color: black; /* Paragraph text color set to black */
+            color: black;
         }
 
         .news-container {
@@ -192,17 +194,17 @@
             {
                 title: "Addressing the health threats posed by climate change",
                 image: "https://www.hsph.harvard.edu/news/wp-content/uploads/sites/21/2024/10/Globe-grass-stethoscope_1200x800.jpg",
-                content: "October 31, 2024 – Throughout the fall, Harvard Chan School faculty will share evidence-based recommendations on urgent public health issues facing the next U.S. administration. Renee Salas, affiliated faculty at the Center for Climate, Health, and the Global Environment at Harvard Chan School, is a member of the global Lancet Countdown, and she founded the Lancet Countdown U.S. Brief Working Group in 2018. Here, she discusses the health harms posed by climate change as well as policies that could help mitigate the threat."
+                content: "October 31, 2024 – Throughout the fall, Harvard Chan School faculty will share evidence-based recommendations on urgent public health issues facing the next U.S. administration."
             },
             {
                 title: "EEA Trends and Projections: EU greenhouse gas emissions see significant drop in 2023",
                 image: "https://img.freepik.com/premium-photo/wind-turbine-farm-power-generator-beautiful-nature-landscape-production-renewable-energy_31965-10508.jpg",
-                content: "Total net greenhouse gas emissions in the European Union dropped by 8% last year, marking significant progress towards climate neutrality for the EU. The huge drop was led by a significant decline in coal use and growth of renewable energy sources and supported by reduced energy consumption across Europe, according to estimated figures included in the latest European Environment Agency (EEA) ‘Trends and Projections’ report published today. The annual EEA check-up on EU progress on its energy and climate targets stresses that EU Member States will need to sustain this rate of progress to achieve Europe’s climate and energy targets."
+                content: "Total net greenhouse gas emissions in the European Union dropped by 8% last year, marking significant progress towards climate neutrality for the EU."
             },
             {
                 title: "Scientists say climate change made Spanish floods worse",
                 image: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/5870/live/e704f240-96db-11ef-91d6-57661c36bca5.jpg.webp",
-                content: "While scientists are reluctant to say any single extreme event was caused by climate change, researchers have been quick to point out the role that rising temperatures have had in making the Spanish floods worse."
+                content: "While scientists are reluctant to say any single extreme event was caused by climate change, researchers have pointed out the role of rising temperatures."
             }
         ];
 
