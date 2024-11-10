@@ -10,7 +10,53 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav>
+       nav {
+            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #083;
+        }
+
+        /* Logo styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 60px; /* Increased logo size */
+            width: auto;
+            margin-right: 10px;
+        }
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
