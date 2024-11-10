@@ -5,11 +5,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Carbon Footprint</title>
-    <link rel="stylesheet" href="about-styles.css">
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Dark overlay for better text readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 0; /* Reduced left padding */
+            margin-left: -10px; /* Shifts all items slightly to the left */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #083; /* Dark green on hover */
+        }
+
+        /* Main content styling */
+        .content {
+            padding: 120px 20px 20px; /* To avoid overlap with navbar */
+            text-align: center;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 4em;
+            margin-bottom: 0.2em;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .content p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* Slogan styling */
+        .slogan {
+            font-size: 1.8em;
+            color: #33cc33;
+            margin-top: 0.2em;
+            font-weight: bold;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button styling */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 1.5em;
+            background-color: #33cc33;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #28a745;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navbar with logo -->
     <nav>
+        <div class="logo">
+            <img src="sustainify-logo.png" alt="Sustainify Logo">
+            Sustainify
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
@@ -20,6 +152,8 @@
             <li><a href="discussion.html">Discussion Page</a></li>
         </ul>
     </nav>
+
+    <!-- Main Content -->
     <div class="content">
         <h1>What is a Carbon Footprint?</h1>
         <p>A carbon footprint is the amount of greenhouse gases (mainly CO₂) caused by human activities. It shows the impact on climate change and applies to individuals, companies, products, or countries.</p>
@@ -92,16 +226,14 @@
                     <li>Offset Emissions: Support projects that capture or cut emissions.</li>
                 </ul>
                 <div class="image-container">
-                    <img src="reduce-footprint.jpg" alt="Ways to Reduce Carbon Footprint">
-                </div>
-            </li>
-            <li><strong>How to Measure Carbon Footprints:</strong><br>Standards like the Greenhouse Gas Protocol and tools like carbon footprint calculators help people and companies measure their emissions.
-                <div class="image-container">
-                    <img src="measure-footprint.jpg" alt="Measuring Carbon Footprint">
+                    <img src="reduce-footprint.jpg" alt="Reduce Carbon Footprint">
                 </div>
             </li>
         </ul>
+        <p class="slogan">Every Action Counts. Together, We Can Make a Difference.</p>
+        <a href="calculator.html" class="cta-button">Calculate Your Carbon Footprint</a>
     </div>
+
 </body>
 
-</html> 
+</html>
