@@ -69,7 +69,7 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-/* Content styling with balanced font sizes */
+/* Content styling with clear font size hierarchy */
 .content {
     padding: 80px 20px 20px; /* Top padding for nav */
     color: white;
@@ -78,15 +78,21 @@ nav ul li a:hover {
 .content h1 {
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Title size */
+    font-size: 3em; /* Larger title size */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-.content h2,
+.content h2 {
+    font-size: 2.5em; /* Smaller than h1 */
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .content h3 {
-    font-size: 2em; /* Subtitle size */
+    font-size: 2em; /* Smaller than h2 */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -95,7 +101,7 @@ nav ul li a:hover {
 .content p,
 .content ul,
 .content li {
-    font-size: 1.2em; /* Content font size */
+    font-size: 1.2em; /* Smallest content font size */
     line-height: 1.6;
     font-weight: bold;
     color: white;
@@ -115,4 +121,3 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
