@@ -22,54 +22,54 @@ body::before {
 }
 
 /* Navbar styling */
-        nav {
-            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-        }
+nav {
+    background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-        nav ul li {
-            float: left;
-        }
+nav ul li {
+    float: left;
+}
 
-        nav ul li a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        nav ul li a:hover {
-            background-color: #083;
-        }
+nav ul li a:hover {
+    background-color: #083;
+}
 
-        /* Logo styling */
-        .logo {
-            display: flex;
-            align-items: center;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-        .logo img {
-            height: 60px; /* Increased logo size */
-            width: auto;
-            margin-right: 10px;
-        }
+.logo img {
+    height: 60px; /* Increased logo size */
+    width: auto;
+    margin-right: 10px;
+}
 
-/* Content styling */
+/* Content styling with larger fonts */
 .content {
     padding: 80px 20px 20px; /* Top padding for nav */
     color: white;
@@ -78,7 +78,7 @@ body::before {
 .content h1 {
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Moderate title size */
+    font-size: 3em; /* Increased title size */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -86,7 +86,7 @@ body::before {
 
 .content h2,
 .content h3 {
-    font-size: 1.75em; /* Moderate subtitle size */
+    font-size: 2.25em; /* Increased subtitle size */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -95,8 +95,8 @@ body::before {
 .content p,
 .content ul,
 .content li {
-    font-size: 1.2em; /* Reduced content font size */
-    line-height: 1.6;
+    font-size: 1.5em; /* Increased content font size */
+    line-height: 1.8;
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
