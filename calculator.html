@@ -43,7 +43,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            text-align: center; /* Center menu items */
+            text-align: left; /* Left align the menu items */
         }
 
         nav ul li {
@@ -156,7 +156,7 @@
     <script>
         function calculateFootprint() {
             // Getting user input
-            let milesDriven = document.getElementById('miles').value;
+            let kilometresDriven = document.getElementById('kilometres').value;
             let electricityUsed = document.getElementById('electricity').value;
             let wasteProduced = document.getElementById('waste').value;
 
@@ -166,12 +166,12 @@
             const wasteEmissionFactor = 0.01; // kg CO2 per kg of waste
 
             // Convert inputs to numbers
-            milesDriven = parseFloat(milesDriven);
+            kilometresDriven = parseFloat(kilometresDriven);
             electricityUsed = parseFloat(electricityUsed);
             wasteProduced = parseFloat(wasteProduced);
 
             // Calculate carbon footprint
-            let carEmissions = milesDriven * carEmissionFactor;
+            let carEmissions = kilometresDriven * carEmissionFactor;
             let electricityEmissions = electricityUsed * electricityEmissionFactor;
             let wasteEmissions = wasteProduced * wasteEmissionFactor;
 
@@ -192,4 +192,3 @@
 </body>
 
 </html>
-
