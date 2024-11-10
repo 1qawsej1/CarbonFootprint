@@ -69,7 +69,7 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-/* Content styling with reversed font size hierarchy */
+/* Content styling with clear font size hierarchy */
 .content {
     padding: 80px 20px 20px; /* Top padding for nav */
     color: white;
@@ -78,21 +78,21 @@ nav ul li a:hover {
 .content h1 {
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Smaller title size */
+    font-size: 3em; /* Larger title size */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .content h2 {
-    font-size: 1.3em; /* Smaller than h1 */
+    font-size: 2.5em; /* Smaller than h1 */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .content h3 {
-    font-size: 1.2em; /* Smaller than h2 */
+    font-size: 2em; /* Smaller than h2 */
     font-weight: bold;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -101,7 +101,7 @@ nav ul li a:hover {
 .content p,
 .content ul,
 .content li {
-    font-size: 2em; /* Larger content font size */
+    font-size: 1.2em; /* Smallest content font size */
     line-height: 1.6;
     font-weight: bold;
     color: white;
