@@ -86,28 +86,39 @@
         /* Main content styling */
         .content {
             padding: 120px 20px 20px; /* To avoid overlap with navbar */
-            text-align: center;
+            text-align: left;
             color: white;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .content h1 {
-            font-size: 4em;
-            margin-bottom: 0.2em;
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
             color: #fff;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         .content p {
-            font-size: 1.5em;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.8em;
             line-height: 1.6;
             color: #ddd;
+            margin: 0 0 20px 0;
+        }
+
+        .content ul {
+            font-size: 1.6em;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .content li {
+            margin-bottom: 15px;
         }
 
         /* Slogan styling */
         .slogan {
-            font-size: 1.8em;
+            font-size: 2em;
             color: #33cc33;
             margin-top: 0.2em;
             font-weight: bold;
@@ -117,11 +128,11 @@
         /* Button styling */
         .cta-button {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 14px 35px;
             margin-top: 1.5em;
             background-color: #33cc33;
             color: white;
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
             border: none;
             border-radius: 5px;
@@ -239,14 +250,15 @@
                     <li>Switch to Renewables: Solar, wind, etc.</li>
                     <li>Choose Greener Transport: Walk, bike, public transit.</li>
                     <li>Reduce Waste: Recycle and reuse.</li>
-                    <li>Offset Emissions: Support projects that capture or cut emissions.</li>
+                    <li>Offset Emissions: Support projects that capture carbon, like reforestation.</li>
                 </ul>
                 <div class="image-container">
-                    <img src="reduce-footprint.jpg" alt="Reduce Carbon Footprint">
+                    <img src="reduce-footprint.jpg" alt="Ways to Reduce Carbon Footprint">
                 </div>
             </li>
         </ul>
-        <p class="slogan">Every Action Counts. Together, We Can Make a Difference!</p>
+
+        <p class="slogan">We Can Make a Difference!</p>
         <a href="calculator.html" class="cta-button">Calculate Your Carbon Footprint</a>
     </div>
 </body>
