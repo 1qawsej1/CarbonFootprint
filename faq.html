@@ -5,11 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Carbon Footprint</title>
-    <link rel="stylesheet" href="about-styles.css">
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Dark overlay for better text readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 0; /* Reduced left padding */
+            margin-left: -10px; /* Shifts all items slightly to the left */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #083; /* Dark green on hover */
+        }
+
+        /* Main content styling */
+        .content {
+            padding: 120px 20px 20px; /* To avoid overlap with navbar */
+            text-align: center;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 4em;
+            margin-bottom: 0.2em;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .faq-answer {
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        .faq-answer a {
+            color: #33cc33;
+        }
+
+        .faq-answer a:hover {
+            color: #28a745;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Navbar with logo -->
     <nav>
+        <div class="logo">
+            <img src="sustainify-logo.png" alt="Sustainify Logo">
+            Sustainify
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
@@ -17,10 +135,11 @@
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="faq.html">FAQs</a></li>
             <li><a href="calculator.html">CFP Calculator</a></li>
-             <li><a href="discussion.html">Discussion Page</a></li>
+            <li><a href="discussion.html">Discussion Page</a></li>
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <div class="content">
         <h1>Frequently Asked Questions</h1>
         
