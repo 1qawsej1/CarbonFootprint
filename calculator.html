@@ -11,69 +11,97 @@
             margin: 0;
             padding: 0;
             background-image: url('1.jpg');
-            background-size: 100%;
+            background-size: cover;
+            background-position: center;
+            color: black;
         }
 
+        /* Dark overlay for better readability */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navbar styling */
         nav {
             background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1;
-            padding: 10px 0; /* Add some padding for better spacing */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 10px 0; /* Reduced left padding */
+            margin-left: -10px; /* Shifts all items slightly to the left */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
         }
 
-        nav .logo {
+        .logo {
             display: flex;
             align-items: center;
             color: white;
-            padding: 10px 20px;
             font-size: 1.5em;
             font-weight: bold;
         }
 
-        nav .logo img {
-            height: 60px; /* Increased logo size */
+        .logo img {
+            height: 50px;
             width: auto;
             margin-right: 10px;
         }
 
         nav ul {
             list-style-type: none;
+            display: flex;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            text-align: left; /* Left align the menu items */
         }
 
         nav ul li {
-            display: inline-block; /* Changed from float for better alignment */
+            margin-left: 20px;
         }
 
         nav ul li a {
-            display: inline-block;
             color: white;
-            padding: 14px 20px; /* Updated padding */
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         nav ul li a:hover {
-            background-color: #083; /* Hover effect with darker green */
+            background-color: #083; /* Dark green on hover */
         }
 
         /* Carbon Footprint Calculator Box */
         .container {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             margin: 170px auto 0; /* Added margin-top to create space below the navbar */
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .input-group {
             margin-bottom: 20px;
+            text-align: left;
         }
 
         label {
@@ -110,6 +138,28 @@
             background-color: #f9f9f9;
             border-radius: 5px;
             font-weight: bold;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.2em;
+                padding: 8px 16px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            .container {
+                margin-top: 130px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
