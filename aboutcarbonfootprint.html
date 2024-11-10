@@ -5,107 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Carbon Footprint</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('2.jpg');
-            background-size: 100%;
-        }
-
-        nav {
-            background-color: #333;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-
-        nav ul li {
-            float: left;
-        }
-
-        nav ul li a,
-        .dropbtn {
-            display: inline-block;
-            color: ghostwhite;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: #111;
-        }
-
-        .dropdown {
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            font-weight: bold; /* Bold text */
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .content h1 {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 75px;
-            font-weight: bold; /* Bold text */
-            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff; /* Larger white outline */
-        }
-
-        .content p,
-        .content ul,
-        .content li {
-            font-size: 25px;
-            line-height: 1.8;
-            font-weight: bold; /* Bold text */
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* White outline */
-        }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .image-container img {
-            max-width: 100%; /* Ensure image fits within the page */
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="about-styles.css">
 </head>
 
 <body>
@@ -117,19 +17,15 @@
             <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="faq.html">FAQs</a></li>
             <li><a href="calculator.html">CFP Calculator</a></li>
-             <li><a href="discussion.html">Discussion Page</a></li>
+            <li><a href="discussion.html">Discussion Page</a></li>
         </ul>
     </nav>
     <div class="content">
         <h1>What is a Carbon Footprint?</h1>
-        <p>
-            A carbon footprint is the amount of greenhouse gases (mainly CO₂) caused by human activities. It shows the impact on climate change and applies to individuals, companies, products, or countries.
-        </p>
+        <p>A carbon footprint is the amount of greenhouse gases (mainly CO₂) caused by human activities. It shows the impact on climate change and applies to individuals, companies, products, or countries.</p>
         <p>Types of Carbon Emissions:</p>
         <ul>
-            <li>
-                <strong>Direct Emissions</strong>
-                <br>These come from sources you control, like:
+            <li><strong>Direct Emissions</strong><br>These come from sources you control, like:
                 <ul>
                     <li>Burning fuel in cars or heating.</li>
                     <li>Factories and industrial processes.</li>
@@ -138,9 +34,7 @@
                     <img src="direct-emissions.jpg" alt="Direct Emissions">
                 </div>
             </li>
-            <li>
-                <strong>Indirect Emissions</strong>
-                <br>These come from sources you don’t directly control but benefit from, like:
+            <li><strong>Indirect Emissions</strong><br>These come from sources you don’t directly control but benefit from, like:
                 <ul>
                     <li>Electricity from power plants.</li>
                     <li>Emissions from making and transporting the goods you buy.</li>
@@ -149,9 +43,7 @@
                     <img src="indirect-emissions.jpg" alt="Indirect Emissions">
                 </div>
             </li>
-            <li>
-                <strong>Product Life Cycle Emissions</strong>
-                <br>Emissions across a product’s life, including:
+            <li><strong>Product Life Cycle Emissions</strong><br>Emissions across a product’s life, including:
                 <ul>
                     <li>Making materials, manufacturing, shipping, using, and disposing of the product.</li>
                 </ul>
@@ -159,9 +51,7 @@
                     <img src="product-life-cycle.png" alt="Product Life Cycle Emissions">
                 </div>
             </li>
-            <li>
-                <strong>Personal Carbon Footprint</strong>
-                <br>Your personal footprint includes:
+            <li><strong>Personal Carbon Footprint</strong><br>Your personal footprint includes:
                 <ul>
                     <li>Transport: Cars, planes, or public transport.</li>
                     <li>Home Energy: Heating, cooling, and electricity.</li>
@@ -172,9 +62,7 @@
                     <img src="personal-footprint.jpg" alt="Personal Carbon Footprint">
                 </div>
             </li>
-            <li>
-                <strong>Company Carbon Footprint</strong>
-                <br>Companies measure emissions to manage their impact. They track:
+            <li><strong>Company Carbon Footprint</strong><br>Companies measure emissions to manage their impact. They track:
                 <ul>
                     <li>Operations: Emissions from their own facilities.</li>
                     <li>Supply Chain: Emissions from suppliers.</li>
@@ -184,9 +72,7 @@
                     <img src="company-footprint.jpg" alt="Company Carbon Footprint">
                 </div>
             </li>
-            <li>
-                <strong>Country and Global Carbon Footprints</strong>
-                <br>Countries look at emissions from:
+            <li><strong>Country and Global Carbon Footprints</strong><br>Countries look at emissions from:
                 <ul>
                     <li>Energy: Coal, oil, or renewable energy.</li>
                     <li>Industry: Factories and production.</li>
@@ -197,8 +83,7 @@
                     <img src="global-footprint.jpg" alt="Global Carbon Footprint">
                 </div>
             </li>
-            <li>
-                <strong>Ways to Reduce Carbon Footprints:</strong>
+            <li><strong>Ways to Reduce Carbon Footprints:</strong>
                 <ul>
                     <li>Use Less Energy: Be energy-efficient.</li>
                     <li>Switch to Renewables: Solar, wind, etc.</li>
@@ -210,9 +95,7 @@
                     <img src="reduce-footprint.jpg" alt="Ways to Reduce Carbon Footprint">
                 </div>
             </li>
-            <li>
-                <strong>How to Measure Carbon Footprints:</strong>
-                <br>Standards like the Greenhouse Gas Protocol and tools like carbon footprint calculators help people and companies measure their emissions.
+            <li><strong>How to Measure Carbon Footprints:</strong><br>Standards like the Greenhouse Gas Protocol and tools like carbon footprint calculators help people and companies measure their emissions.
                 <div class="image-container">
                     <img src="measure-footprint.jpg" alt="Measuring Carbon Footprint">
                 </div>
