@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discussion Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you are using an external CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* Navbar styling */
         nav {
@@ -14,46 +14,49 @@
             top: 0;
             width: 100%;
             z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
         }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        nav ul li {
-            float: left;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            background-color: #083;
-        }
-
-        /* Logo styling */
         .logo {
             display: flex;
             align-items: center;
             color: white;
-            padding: 10px 20px;
             font-size: 1.5em;
             font-weight: bold;
-            float: left; /* Aligns the logo to the left */
         }
 
         .logo img {
-            height: 60px; /* Increased logo size */
+            height: 50px;
             width: auto;
             margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #083; /* Dark green on hover */
         }
     </style>
 </head>
@@ -76,13 +79,11 @@
         </ul>
     </nav>
 
-    <main style="padding-top: 100px;"> <!-- Offset main content for fixed navbar -->
-        <!-- Title Bar -->
+    <main style="padding-top: 100px;">
         <div class="title-bar">
             <h1>Discussion Page - Share your thoughts and engage in conversation!</h1>
         </div>
 
-        <!-- Comment Section -->
         <div id="comment-section">
             <h2>Join the Conversation</h2>
             <form id="comment-form">
@@ -91,12 +92,11 @@
                 <button type="submit">Post Comment</button>
             </form>
 
-            <!-- Display Comments Here -->
             <div id="comments-container"></div>
         </div>
     </main>
 
-    <script src="script.js"></script> <!-- External JS file for dynamic functionality -->
+    <script src="script.js"></script>
 </body>
 
 </html>
