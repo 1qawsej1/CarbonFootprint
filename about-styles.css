@@ -1,76 +1,35 @@
-/* Basic page styling */
+/* Basic page styling with background */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('2.jpg');
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Dark overlay to improve text readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1;
 }
 
 /* Navbar styling */
 nav {
-    background-color: #333;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a,
-.dropbtn {
-    display: block;
-    color: ghostwhite;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-align: center;
-}
-
-nav ul li a:hover,
-.dropdown:hover .dropbtn {
-    background-color: #111;
-}
-
-/* Dropdown menu */
-.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent for a sleek look */
 }
 
 /* Content styling */
 .content {
     padding: 20px;
-    color: black;
+    color: white;
 }
 
 .content h1 {
@@ -78,7 +37,7 @@ nav ul li a:hover,
     margin-top: 20px;
     font-size: 2.5em;
     font-weight: bold;
-    color: ghostwhite;
+    color: white;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
@@ -88,19 +47,6 @@ nav ul li a:hover,
     font-size: 1.25em;
     line-height: 1.8;
     font-weight: bold;
-    color: ghostwhite;
+    color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
-/* Image container styling */
-.image-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
