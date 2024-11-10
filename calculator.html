@@ -20,33 +20,10 @@
             top: 0;
             width: 100%;
             z-index: 1;
+            padding: 10px 0; /* Add some padding for better spacing */
         }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        nav ul li {
-            float: left;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            background-color: #083;
-        }
-
-        /* Logo styling */
-        .logo {
+        nav .logo {
             display: flex;
             align-items: center;
             color: white;
@@ -55,20 +32,44 @@
             font-weight: bold;
         }
 
-        .logo img {
+        nav .logo img {
             height: 60px; /* Increased logo size */
             width: auto;
             margin-right: 10px;
         }
 
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center; /* Center menu items */
+        }
 
+        nav ul li {
+            display: inline-block; /* Changed from float for better alignment */
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px; /* Updated padding */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #083; /* Hover effect with darker green */
+        }
+
+        /* Carbon Footprint Calculator Box */
         .container {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 500px;
-            margin: auto;
+            margin: 100px auto 0; /* Added margin-top to create space below the navbar */
         }
 
         .input-group {
@@ -114,7 +115,7 @@
 </head>
 
 <body>
-        <nav>
+    <nav>
         <div class="logo">
             <img src="sustainify-logo.png" alt="Sustainify Logo">
             Sustainify
@@ -191,3 +192,4 @@
 </body>
 
 </html>
+
