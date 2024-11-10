@@ -28,6 +28,22 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
+    padding: 10px 0; /* Add some padding for better spacing */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .logo img {
+    height: 60px; /* Adjusted logo size */
+    width: auto;
+    margin-right: 10px;
 }
 
 nav ul {
@@ -35,10 +51,11 @@ nav ul {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    text-align: center; /* Center menu items */
 }
 
 nav ul li {
-    float: left;
+    display: inline-block; /* Changed from float for better alignment */
 }
 
 nav ul li a,
