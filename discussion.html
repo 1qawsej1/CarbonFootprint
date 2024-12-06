@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainify | Discussion</title>
+    <link rel="stylesheet" href="styles.css">
 <style>
     /* General styles */
     * {
@@ -162,3 +170,44 @@
         }
     }
 </style>
+</head>
+
+<body>
+    <!-- Navbar with logo -->
+    <nav>
+        <div class="logo">
+            <img src="sustainify-logo.png" alt="Sustainify Logo">
+            Sustainify
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="calculator.html">CFP Calculator</a></li>
+            <li><a href="discussion.html">Discussion Page</a></li>
+        </ul>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <div class="title-bar">
+            <h1>Discussion Page - Share your thoughts and engage in conversation!</h1>
+        </div>
+
+        <div id="comment-section">
+            <h2>Join the Conversation</h2>
+            <form id="comment-form">
+                <input type="text" id="username-input" placeholder="Enter your username" required>
+                <textarea id="comment-input" placeholder="Write your comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+
+            <div id="comments-container"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
