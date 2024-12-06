@@ -30,61 +30,60 @@
             z-index: -1;
         }
 
-        /* Navbar styling */
-        nav {
-            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 15px 15px 0; /* Increased padding */
-            margin-left: -10px; /* Shifts all items slightly to the left */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-        }
+/* Navbar styling */
+nav {
+    background: linear-gradient(90deg, #006400, #228B22); /* Smooth gradient effect */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-            color: white;
-            font-size: 2em; /* Increased font size */
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        .logo img {
-            height: 70px; /* Increased logo size */
-            width: auto;
-            margin-right: 15px; /* Increased margin */
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.8em; /* Balanced font size */
+    font-weight: bold;
+}
 
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+.logo img {
+    height: 50px; /* Optimized logo size */
+    width: auto;
+    margin-right: 15px;
+}
 
-        nav ul li {
-            margin-left: 25px; /* Increased margin between links */
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Consistent spacing between links */
+    margin: 0;
+    padding: 0;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 15px 20px; /* Increased padding */
-            border-radius: 6px; /* Slightly larger border radius */
-            font-size: 1.2em; /* Increased font size */
-            transition: background-color 0.3s ease;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px; /* Subtle rounding for buttons */
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
 
-        nav ul li a:hover {
-            background-color: #083; /* Dark green on hover */
-        }
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Translucent hover effect */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
 
-
+nav ul li a:active {
+    background-color: #004d00; /* Darker color for active state */
+}
         /* Main content styling */
         h1, h2, h3, h4, p, ul, li {
             margin: 20px;
