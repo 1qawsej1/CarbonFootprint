@@ -1,104 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+    /* General styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainify | Discussion</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Navbar styling */
-        nav {
-            background-color: rgba(0, 100, 0, 0.9); /* Dark green background */
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 10px 10px 0; /* Reduced left padding */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-            margin-left: -10px; /* Shifts all items to the left */
-        }
+    body {
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+    }
 
-.logo {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 10px; /* Add a positive value here */
-}
+    main {
+        padding: 120px 20px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .logo img {
-            height: 50px;
-            width: auto;
-            margin-right: 10px;
-        }
+    /* Navbar styles */
+    nav {
+        background-color: #006400; /* Dark green */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
+    .logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #005000;
+        color: #fff;
+    }
+
+    /* Title bar */
+    .title-bar {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .title-bar h1 {
+        font-size: 2rem;
+        color: #006400;
+    }
+
+    /* Comment section */
+    #comment-section {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #comment-section h2 {
+        margin-bottom: 15px;
+        color: #006400;
+    }
+
+    #comment-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #comment-form input,
+    #comment-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    #comment-form button {
+        background-color: #006400;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #comment-form button:hover {
+        background-color: #005000;
+    }
+
+    /* Comments container */
+    #comments-container {
+        margin-top: 20px;
+    }
+
+    .comment {
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-left: 5px solid #006400;
+        border-radius: 4px;
+    }
+
+    .comment h3 {
+        margin-bottom: 5px;
+        color: #006400;
+    }
+
+    .comment p {
+        margin: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
         nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
+            flex-direction: column;
+            gap: 10px;
         }
 
         nav ul li {
-            margin-left: 20px;
+            margin-left: 0;
         }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
+        .logo {
+            font-size: 1.25rem;
         }
-
-        nav ul li a:hover {
-            background-color: #083; /* Dark green on hover */
-        }
-    </style>
-</head>
-
-<body>
-    <!-- Navbar with logo -->
-    <nav>
-        <div class="logo">
-            <img src="sustainify-logo.png" alt="Sustainify Logo">
-            Sustainify
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutcarbonfootprint.html">About Carbon Footprint</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="calculator.html">CFP Calculator</a></li>
-            <li><a href="discussion.html">Discussion Page</a></li>
-        </ul>
-    </nav>
-
-    <main style="padding-top: 100px;">
-        <div class="title-bar">
-            <h1>Discussion Page - Share your thoughts and engage in conversation!</h1>
-        </div>
-
-        <div id="comment-section">
-            <h2>Join the Conversation</h2>
-            <form id="comment-form">
-                <input type="text" id="username-input" placeholder="Enter your username" required>
-                <textarea id="comment-input" placeholder="Write your comment" required></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-
-            <div id="comments-container"></div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    }
+</style>
